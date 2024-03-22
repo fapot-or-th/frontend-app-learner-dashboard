@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { logError } from '@edx/frontend-platform/logging';
 import { initializeHotjar } from '@edx/frontend-enterprise-hotjar';
+import Header from '@edx/frontend-component-header';
 
 import { ErrorPage, AppContext } from '@edx/frontend-platform/react';
 import Footer from '@edx/frontend-component-footer';
@@ -25,7 +26,6 @@ import track from 'tracking';
 import fakeData from 'data/services/lms/fakeData/courses';
 
 import AppWrapper from 'containers/WidgetContainers/AppWrapper';
-import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
 
 import { getConfig } from '@edx/frontend-platform';
 import messages from './messages';
@@ -95,7 +95,7 @@ export const App = () => {
       </Helmet>
       <div>
         <AppWrapper>
-          <LearnerDashboardHeader />
+          <Header />
           <main>
             {hasNetworkFailure
               ? (
