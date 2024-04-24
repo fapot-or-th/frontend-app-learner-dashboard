@@ -4,6 +4,7 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { Badge } from '@edx/paragon';
 
+import noCourseImage from 'assets/no_course_image.png';
 import track from 'tracking';
 import { reduxHooks } from 'hooks';
 import verifiedRibbon from 'assets/verified-ribbon.png';
@@ -27,6 +28,12 @@ export const CourseCardImage = ({ cardId, orientation }) => {
         className="pgn__card-image-cap show"
         src={bannerImgSrc}
         alt={formatMessage(messages.bannerAlt)}
+        onError={({ currentTarget }) => {
+          // eslint-disable-next-line no-param-reassign
+          currentTarget.onerror = null; // prevents looping
+          // eslint-disable-next-line no-param-reassign
+          currentTarget.src = noCourseImage;
+        }}
       />
       {
         isVerified && (

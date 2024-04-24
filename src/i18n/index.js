@@ -8,6 +8,7 @@ import es419Messages from './messages/es_419.json';
 import frMessages from './messages/fr.json';
 import frcaMessages from './messages/fr_CA.json';
 import ptbrMessages from './messages/pt_BR.json';
+import thMessages from './messages/th.json';
 import zhcnMessages from './messages/zh_CN.json';
 
 const appMessages = {
@@ -16,6 +17,7 @@ const appMessages = {
   fr: frMessages,
   'fr-ca': frcaMessages,
   'pt-br': ptbrMessages,
+  th: thMessages,
   'zh-cn': zhcnMessages,
 };
 

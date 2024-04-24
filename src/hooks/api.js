@@ -31,6 +31,13 @@ export const useInitializeApp = () => {
   });
 };
 
+export const useAllCourses = () => {
+  const loadData = reduxHooks.useLoadAllCourses();
+  return module.useNetworkRequest(api.getAllCourses, {
+    onSuccess: ({ data }) => loadData(data),
+  });
+};
+
 export const useNewEntitlementEnrollment = (cardId) => {
   const { uuid } = reduxHooks.useCardEntitlementData(cardId);
   const onSuccess = module.useInitializeApp();
@@ -66,7 +73,6 @@ export const useUnenrollFromCourse = (cardId) => {
     { requestKey: RequestKeys.unenrollFromCourse },
   );
 };
-
 export const useMasqueradeAs = () => {
   const loadData = reduxHooks.useLoadData();
   return module.useNetworkRequest(

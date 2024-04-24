@@ -37,6 +37,7 @@
   "MasqueradeBar.UnknownError": "Une erreur d'origine inconnue s'est produite.",
   "WidgetSidebar.lookingForChallengePrompt": "A la recherche d'un nouveau défi?",
   "WidgetSidebar.findCoursesButton": "Trouver un cours {arrow}",
+  "WidgetSidebar.recommendationsForYou": "Recommendations for you",
   "ProductRecommendations.recommendationsHeading": "You might also like",
   "ProductRecommendations.executiveEducationHeading": "Executive Education",
   "ProductRecommendations.executiveEducationDescription": "Short Courses to develop leadership skills",

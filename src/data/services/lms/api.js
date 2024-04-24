@@ -20,6 +20,8 @@ export const initializeList = ({ user } = {}) => get(
   stringifyUrl(urls.getInitApiUrl(), { [apiKeys.user]: user }),
 );
 
+export const getAllCourses = ({ user } = {}) => get(urls.allCourses(), { [apiKeys.user]: user });
+
 export const updateEntitlementEnrollment = ({ uuid, courseId }) => post(
   urls.entitlementEnrollment(uuid),
   { [apiKeys.courseRunId]: courseId },
@@ -81,4 +83,5 @@ export default {
   logUpgrade,
   logShare,
   createCreditRequest,
+  getAllCourses,
 };

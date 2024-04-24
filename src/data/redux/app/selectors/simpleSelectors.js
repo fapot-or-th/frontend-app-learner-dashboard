@@ -16,6 +16,7 @@ export const simpleSelectors = StrictDict({
   selectSessionModal: mkSimpleSelector(app => app.selectSessionModal),
   pageNumber: mkSimpleSelector(app => app.pageNumber),
   socialShareSettings: mkSimpleSelector(app => app.socialShareSettings),
+  allCourses: mkSimpleSelector(app => app.allCourses),
 });
 
 export const cardSimpleSelectors = StrictDict({

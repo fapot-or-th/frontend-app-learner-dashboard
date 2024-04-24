@@ -10,6 +10,8 @@ export const getApiUrl = () => (`${getConfig().LMS_BASE_URL}/api`);
 
 const getInitApiUrl = () => (`${getApiUrl()}/learner_home/init`);
 
+const allCourses = () => (`${getApiUrl()}/learner_home/init/courses`);
+
 const event = () => `${getBaseUrl()}/event`;
 const courseUnenroll = () => `${getBaseUrl()}/change_enrollment`;
 const updateEmailSettings = () => `${getApiUrl()}/change_email_settings`;
@@ -39,4 +41,5 @@ export default StrictDict({
   learningMfeUrl,
   programsUrl,
   updateEmailSettings,
+  allCourses,
 });

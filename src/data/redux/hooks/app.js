@@ -14,6 +14,7 @@ export const useEnterpriseDashboardData = () => useSelector(selectors.enterprise
 export const usePlatformSettingsData = () => useSelector(selectors.platformSettings);
 export const useSelectSessionModalData = () => useSelector(selectors.selectSessionModal);
 export const useSocialShareSettings = () => useSelector(selectors.socialShareSettings);
+export const useAllCourses = () => useSelector(selectors.allCourses);
 
 /** global-level meta-selectors **/
 export const useHasCourses = () => useSelector(selectors.hasCourses);
@@ -83,5 +84,13 @@ export const useLoadData = () => {
     dispatch(actions.setPageNumber(1));
     dispatch(actions.loadGlobalData(globalData));
     dispatch(actions.loadCourses({ courses }));
+  };
+};
+
+export const useLoadAllCourses = () => {
+  const dispatch = useDispatch();
+  return ({ results }) => {
+    const filtered = results?.splice(0, 5) ?? [];
+    dispatch(actions.loadAllCourses(filtered));
   };
 };

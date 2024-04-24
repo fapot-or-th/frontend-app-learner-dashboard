@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LookingForChallengeWidget from 'widgets/LookingForChallengeWidget';
+import RecomendationWidget from 'widgets/RecomendationWidget';
 import LoadingView from './LoadingView';
 import LoadedView from './LoadedView';
 import hooks from './hooks';
@@ -26,7 +26,7 @@ export const RecommendationsPanel = () => {
     if (!experimentLoading && isPaintedDoorWidgetBtnVariation) {
       return (
         <>
-          <LookingForChallengeWidget />
+          <RecomendationWidget />
           <div className="pt-3" />
           <RecommendationsPaintedDoorBtn
             experimentVariation={experimentVariation}
@@ -36,7 +36,7 @@ export const RecommendationsPanel = () => {
       );
     }
     return (
-      <LookingForChallengeWidget />
+      <RecomendationWidget />
     );
   };
 

@@ -37,6 +37,7 @@
   "MasqueradeBar.UnknownError": "Une erreur inconnue est survenue",
   "WidgetSidebar.lookingForChallengePrompt": "A la recherche d'un nouveau défi?",
   "WidgetSidebar.findCoursesButton": "Trouver un cours {arrow}",
+  "WidgetSidebar.recommendationsForYou": "Recommendations for you",
   "ProductRecommendations.recommendationsHeading": "Vous pourriez aussi aimer",
   "ProductRecommendations.executiveEducationHeading": "Formation des cadres",
   "ProductRecommendations.executiveEducationDescription": "Cours abrégés pour développer les compétences en leadership",

@@ -37,6 +37,7 @@
   "MasqueradeBar.UnknownError": "An unknown error occurred",
   "WidgetSidebar.lookingForChallengePrompt": "Looking for a new challenge?",
   "WidgetSidebar.findCoursesButton": "Find a course {arrow}",
+  "WidgetSidebar.recommendationsForYou": "Recommendations for you",
   "ProductRecommendations.recommendationsHeading": "You might also like",
   "ProductRecommendations.executiveEducationHeading": "Executive Education",
   "ProductRecommendations.executiveEducationDescription": "Short Courses to develop leadership skills",
