@@ -20,6 +20,17 @@ export const RecomendationWidget = () => {
 
   hooks.useInitializeAllCourses();
 
+  const newCourses = [...courses];
+
+  const sortedCourses = newCourses.sort(
+    (a, b) => {
+      const enrollmentStartA = new Date(a.enrollment_start ?? '2100-01-01');
+      const enrollmentStartB = new Date(b.enrollment_start ?? '2100-01-01');
+
+      return enrollmentStartA - enrollmentStartB;
+    },
+  );
+
   return (
     <Card orientation="horizontal" id="recomendation-widget">
       <Card.Body className="m-auto pr-2">
@@ -27,7 +38,7 @@ export const RecomendationWidget = () => {
           {formatMessage(messages.recommendationsForYou)}
         </h4>
         <div id="card-container">
-          {courses.map(({ media, name, course_id: courseId }) => (
+          {sortedCourses.map(({ media, name, course_id: courseId }) => (
             <a href={`${getConfig().LMS_BASE_URL}/courses/${courseId}/about`} id="card-item">
               <img
                 src={media.image.small}

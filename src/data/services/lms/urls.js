@@ -10,7 +10,7 @@ export const getApiUrl = () => (`${getConfig().LMS_BASE_URL}/api`);
 
 const getInitApiUrl = () => (`${getApiUrl()}/learner_home/init`);
 
-const allCourses = () => (`${getApiUrl()}/learner_home/init/courses`);
+const allCourses = () => (`${getApiUrl()}/courses/v1/courses/?page_size=50`);
 
 const event = () => `${getBaseUrl()}/event`;
 const courseUnenroll = () => `${getBaseUrl()}/change_enrollment`;
